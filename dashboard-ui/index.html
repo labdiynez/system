@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
-<html class="preload" data-appmode="standalone">
+<!DOCTYPE html>
+<html class="preload">
 <head>
 
     <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="preload" href="modules/fonts/material-icons/LDItaoyNOAY6Uewc665JcIzCKsKc_M9flwmP_3.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="modules/fonts/material-icons/mi_2023_07.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="manifest" href="manifest.json">
     <meta name="description" content="Emby Server">
     <meta name="format-detection" content="telephone=no">
@@ -33,6 +33,71 @@
     <meta name="msapplication-TileImage" content="images/icon-144x144.png">
     <meta name="msapplication-TileColor" content="#333333">
     <meta name="theme-color" content="#43A047">
+
+    <script type="importmap">
+        {
+          "imports": {
+            "itemShortcuts": "./modules/shortcuts.js",
+            "pageJs": "./modules/pagejs/page.js",
+            "medialibraryeditor": "./components/medialibraryeditor/medialibraryeditor.js",
+            "medialibrarycreator": "./components/medialibrarycreator/medialibrarycreator.js",
+            "howler": "./modules/howlerjs/howler.core.js",
+            "skinManager": "./modules/skinmanager.js",
+            "flvjs": "./modules/flvjs/flv.js",
+            "playQueueManager": "./modules/common/playback/playqueuemanager.js",
+            "focusManager": "./modules/focusmanager.js",
+            "browserdeviceprofile": "./modules/browserdeviceprofile.js",
+            "events": "./modules/emby-apiclient/events.js",
+            "connectionManager": "./modules/emby-apiclient/connectionmanager.js",
+            "loading": "./modules/loading/loading.js",
+            "taskButton": "./components/taskbutton.js",
+            "webvtt": "./modules/webvtt/vtt.js",
+            "humanedate": "./modules/humanedate/humanedate.js",
+            "serviceLocator": "./modules/common/servicelocator.js",
+            "globalize": "./modules/common/globalize.js",
+            "datetime": "./modules/common/datetime.js",
+            "backdrop": "./modules/backdrop/backdrop.js",
+            "qualityOptions": "./modules/common/qualityoptions.js",
+            "pluginManager": "./modules/common/pluginmanager.js",
+            "dataFormatter": "./modules/common/dataformatter.js",
+            "itemHelper": "./modules/common/itemhelper.js",
+            "itemManager": "./modules/common/itemmanager/itemmanager.js",
+            "recordingHelper": "./modules/common/recordinghelper.js",
+            "imageLoader": "./modules/imageloader/imageloader.js",
+            "gamepadtokey": "./modules/input/gamepadtokey.js",
+            "virtual-scroller": "./modules/virtual-scroller/virtual-scroller.js",
+            "commandProcessor": "./modules/commandprocessor.js",
+            "cssVars": "./modules/css-vars-ponyfill/css-vars-ponyfill.js",
+            "browser": "./modules/browser.js",
+            "backMenu": "./modules/backmenu/backmenu.js",
+            "soundEffectsManager": "./modules/soundeffects/soundeffectsmanager.js",
+            "soundEffectsPlayer": "./modules/soundeffects/soundeffectsplayer.js",
+            "mediaSession": "./modules/playback/mediasession.js",
+            "mainTabsManager": "./modules/maintabsmanager.js",
+            "dragDropTouch": "./modules/polyfills/dragdroptouch.js",
+            "appHeader": "./modules/appheader/appheader.js",
+            "chromecastHelper": "./modules/chromecast/chromecasthelpers.js",
+            "directorybrowser": "./modules/directorybrowser/directorybrowser.js",
+            "metadataEditor": "./modules/metadataeditor/metadataeditor.js",
+            "personEditor": "./modules/metadataeditor/personeditor.js",
+            "playerSelectionMenu": "./modules/playback/playerselection.js",
+            "playerSettingsMenu": "./modules/playback/playersettingsmenu.js",
+            "emby-collapse": "./modules/emby-elements/emby-collapse/emby-collapse.js",
+            "emby-button": "./modules/emby-elements/emby-button/emby-button.js",
+            "emby-linkbutton": "./modules/emby-elements/emby-button/emby-button.js",
+            "emby-itemscontainer": "./modules/emby-elements/emby-itemscontainer/emby-itemscontainer.js",
+            "alphaNumericShortcuts": "./modules/alphanumericshortcuts/alphanumericshortcuts.js",
+            "emby-scroller": "./modules/emby-elements/emby-scroller/emby-scroller.js",
+            "emby-tabs": "./modules/emby-elements/emby-tabs/emby-tabs.js",
+            "emby-scrollbuttons": "./modules/emby-elements/emby-scrollbuttons/emby-scrollbuttons.js",
+            "emby-progressring": "./modules/emby-elements/emby-progressring/emby-progressring.js",
+            "emby-itemrefreshindicator": "./modules/emby-elements/emby-itemrefreshindicator/emby-itemrefreshindicator.js",
+            "multiSelect": "./modules/multiselect/multiselect.js",
+            "alphaPicker": "./modules/alphapicker/alphapicker.js",
+            "paper-icon-button-light": "./modules/emby-elements/emby-button/paper-icon-button-light.js"
+          }
+        }
+    </script>
 
     <title>Emby</title>
 
@@ -85,8 +150,11 @@
     </div>
 
     <div class="app-splash"></div>
+    
     <script src="apploader.js" defer></script>
+
     <script src="./ExternalPlayer/ExternalPlayers.js"></script>
+    <!-- <script src="./ExternalPlayer/PhotoCarousel.js"></script> -->
     <script src="./ExternalPlayer/emby-misty.js"></script>
     <link rel="stylesheet" href="./ExternalPlayer/emby-misty.css">
 </body>
