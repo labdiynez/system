@@ -15,13 +15,13 @@
     let mxVersion = "ad"
 
     // ExternalPlayers shown in Windows
-    let players_windows = ["PotPlayer", "VLC", "StellarPlayer", "MPV", "dandanplay", "CopyUrl"];
+    let players_windows = ["PotPlayer", "VLC", "MPV"];
     // ExternalPlayers shown in macOS
-    let players_macos = ["VLC", "IINA", "nPlayer", "Infuse", "MPV", "dandanplay", "CopyUrl"];
+    let players_macos = ["VLC", "IINA", "nPlayer", "Infuse", "MPV"];
     // ExternalPlayers shown in iOS
-    let players_ios = ["VLC", "IINA", "nPlayer", "Infuse", "MPV", "CopyUrl"];
+    let players_ios = ["VLC", "IINA", "nPlayer", "Infuse", "MPV"];
     // ExternalPlayers shown in Android
-    let players_android = ["VLC", "nPlayer", "MXPlayer", "MPV", "dandanplay", "CopyUrl"];
+    let players_android = ["VLC", "nPlayer", "MXPlayer", "MPV"];
     // ExternalPlayers shown in others
     let players_others = ["PotPlayer", "VLC", "IINA", "nPlayer", "MXPlayer", "Infuse", "StellarPlayer", "MPV", "dandanplay", "CopyUrl"];
 
