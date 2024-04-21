@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="preload">
+<html>
 <head>
 
     <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="preload" href="modules/fonts/material-icons/mi_2023_11.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="modules/fonts/material-icons/ms_2024_03.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="manifest" href="manifest.json">
     <meta name="description" content="Emby Server">
     <meta name="format-detection" content="telephone=no">
@@ -44,7 +44,6 @@
             "pageJs": "./modules/pagejs/page.js",
             "howler": "./modules/howlerjs/howler.core.js",
             "skinManager": "./modules/skinmanager.js",
-            "flvjs": "./modules/flvjs/flv.js",
             "playQueueManager": "./modules/common/playback/playqueuemanager.js",
             "playbackManager": "./modules/common/playback/playbackmanager.js",
             "focusManager": "./modules/focusmanager.js",
@@ -149,7 +148,8 @@
             "syncJobEditor": "./modules/sync/syncjobeditor.js",
             "morphdom": "./modules/morphdom/morphdom.js",
             "viewManager": "./modules/viewmanager/viewmanager.js",
-            "formHelper": "./modules/formhelper.js",
+            "responseHelper": "./modules/common/responsehelper.js",
+            "formHelper": "./modules/common/responsehelper.js",
             "slideshow": "./modules/slideshow/slideshow.js",
             "listView": "./modules/listview/listview.js",
             "indicators": "./modules/indicators/indicators.js",
@@ -192,8 +192,16 @@
     <title>Emby</title>
 
     <style>
-        .preload {
+        .app-splash-container {
             background-color: #000;
+            position: fixed;
+            z-index: 99999;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            contain: strict;
+            content-visibility: auto;
         }
 
         .app-splash {
@@ -202,12 +210,21 @@
             background-repeat: no-repeat;
             background-size: contain;
             position: fixed;
+            top: 1.8em;
+            left: .9em;
+            width: 6.6em;
+            height: 2em;
+            contain: strict;
+            content-visibility: auto;
+            z-index: 99999;
+        }
+
+        .app-splash-expanded {
             top: 30%;
             left: 30%;
             right: 30%;
             height: 20%;
-            contain: strict;
-            content-visibility: auto;
+            width: auto;
         }
 
         .hide {
@@ -216,7 +233,7 @@
 
         @media (orientation: landscape) {
 
-            .app-splash {
+            .app-splash-expanded {
                 left: 37.5%;
                 right: 37.5%;
             }
@@ -239,7 +256,9 @@
         </div>
     </div>
 
-    <div class="app-splash"></div>
+    <div class="app-splash-container">
+        <div class="app-splash app-splash-expanded"></div>
+    </div>
     
     <script src="apploader.js" defer></script>
 
