@@ -3,7 +3,6 @@
 <head>
 
     <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="preload" href="modules/fonts/material-icons/mi_2024_05.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="manifest" href="manifest.json">
     <meta name="description" content="Emby Server">
     <meta name="format-detection" content="telephone=no">
@@ -103,9 +102,11 @@
             "alphaPicker": "./modules/alphapicker/alphapicker.js",
             "paper-icon-button-light": "./modules/emby-elements/emby-button/paper-icon-button-light.js",
             "tabbedView": "./modules/tabbedview/tabbedview.js",
+            "tabbedSettingsView": "./modules/tabbedview/tabbedview.js",
             "itemsTab": "./modules/tabbedview/itemstab.js",
             "baseView": "./modules/viewmanager/baseview.js",
             "baseTab": "./modules/tabbedview/basetab.js",
+            "baseSettingsTab": "./modules/tabbedview/basetab.js",
             "ListPage": "./list/list.js",
             "connectHelper": "./modules/emby-connect/connecthelper.js",
             "addToList": "./modules/addtolist/addtolist.js",
@@ -113,7 +114,7 @@
             "dom": "./modules/dom.js",
             "textEncoding": "./modules/common/textencoding.js",
             "playerStats": "./modules/playerstats/playerstats.js",
-            "subtitleOffsetOverlay": "./modules/subtitleoffsetoverlay/subtitleoffsetoverlay.js",
+            "subtitleOffsetDialog": "./modules/subtitleoffsetdialog/subtitleoffsetdialog.js",
             "subtitleAppearanceHelper": "./modules/common/subtitleappearancehelper.js",
             "recordingEditor": "./modules/recordingcreator/recordingeditor.js",
             "seriesRecordingEditor": "./modules/recordingcreator/seriesrecordingeditor.js",
@@ -141,7 +142,6 @@
             "emby-premierecontainer": "./modules/emby-elements/emby-premierecontainer/emby-premierecontainer.js",
             "serverRestartDialog": "./modules/serverrestartdialog/serverrestartdialog.js",
             "channelRecordingCreator": "./modules/recordingcreator/channelrecordingcreator.js",
-            "homeSections": "./modules/homesections/homesections.js",
             "refreshDialog": "./modules/refreshdialog/refreshdialog.js",
             "cardBuilder": "./modules/cardbuilder/cardbuilder.js",
             "mouseManager": "./modules/input/mouse.js",
@@ -249,11 +249,11 @@
         <div class="scrollSlider mainDrawerScrollSlider"></div>
     </div>
     <div class="skinHeader focuscontainer-x focuscontainer-up headroom flex align-items-center flex-grow headerTop">
-        <div class="headerLeft headerSection">
+        <div class="headerLeft headerSection focuscontainer-x navout-x">
         </div>
         <div class="headerMiddle headerSection sectionTabs">
         </div>
-        <div class="headerRight headerSection">
+        <div class="headerRight headerSection focuscontainer-x navout-x">
         </div>
     </div>
 
